@@ -117,6 +117,18 @@ test('screenshot returns native image content and preflight labels its limits', 
   assert.equal(result.ready, true);
   assert.match(result.limits, /not actual audio quality/);
 });
+test('OBS image/jpg screenshots normalize to MCP image/jpeg', async () => {
+  class JpegObs extends FakeObs {
+    override async request(name: string, data = {}) {
+      if (name === 'GetSourceScreenshot') return { imageData: 'data:image/jpg;base64,aGVsbG8=' };
+      return super.request(name, data);
+    }
+  }
+  const obs = new JpegObs(); const scheduler = new CueScheduler(obs);
+  const result = await createTools(obs, scheduler).get('obs_screenshot')!.run({ format: 'jpg' }) as ImageResult;
+  assert.equal(result.mimeType, 'image/jpeg'); assert.equal(result.data, 'aGVsbG8=');
+  scheduler.close();
+});
 test('cue jobs execute in delay order, cancel pending commands, and stop after errors', async () => {
   const { obs, run, scheduler } = setup();
   const job = await run('obs_schedule_cues', { name: 'test', cues: [{ delayMs: 20, requestType: 'SetCurrentProgramScene', requestData: { sceneName: 'B' } }, { delayMs: 0, requestType: 'SetCurrentProgramScene', requestData: { sceneName: 'A' } }] }) as any;

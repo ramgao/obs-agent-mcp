@@ -6,11 +6,12 @@ import { createTools, ImageResult } from './tools.js';
 import { CueScheduler } from './cues.js';
 import { catalog, type JsonObject } from './catalog.js';
 import { status } from './workflows.js';
+import { VERSION } from './metadata.js';
 
 export function createServer(obs: ObsApi): { server: Server; close: () => Promise<void> } {
   const scheduler = new CueScheduler(obs);
   const tools = createTools(obs, scheduler);
-  const server = new Server({ name: 'obs-agent-mcp', version: '1.0.0' }, {
+  const server = new Server({ name: 'obs-agent-mcp', version: VERSION }, {
     capabilities: { tools: {}, resources: {}, prompts: {} },
     instructions: 'Control OBS Studio through focused tools or the complete validated request catalog. Start with obs_status and obs_list_requests. Inspect scene item IDs and device property choices before editing. Use obs_screenshot to verify framing. obs_build_scene has dryRun and does not activate by default. Changes affect real OBS; streaming commands broadcast immediately. Timed cues run only while this server process remains alive. Never blindly repeat a failed or timed-out mutation. Read-only mode is enforced on individual dispatched requests. Credentials are redacted from tool output.',
   });

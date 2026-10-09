@@ -48,7 +48,7 @@ Paste this into **Claude Desktop**'s MCP configuration or **Cursor**'s `mcp.json
       "command": "npx",
       "args": [
         "-y",
-        "https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.0/ramgao-obs-agent-mcp-1.0.0.tgz"
+        "https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.1/ramgao-obs-agent-mcp-1.0.1.tgz"
       ],
       "env": {
         "OBS_URL": "ws://127.0.0.1:4455",
@@ -70,7 +70,7 @@ Add this to `~/.codex/config.toml`, replacing the password:
 ```toml
 [mcp_servers.obs]
 command = "npx"
-args = ["-y", "https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.0/ramgao-obs-agent-mcp-1.0.0.tgz"]
+args = ["-y", "https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.1/ramgao-obs-agent-mcp-1.0.1.tgz"]
 startup_timeout_sec = 60
 tool_timeout_sec = 60
 
@@ -83,7 +83,7 @@ OBS_TOOL_MODE = "curated"
 Alternatively, register it with the CLI:
 
 ```sh
-codex mcp add obs --env OBS_PASSWORD=YOUR_OBS_PASSWORD -- npx -y https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.0/ramgao-obs-agent-mcp-1.0.0.tgz
+codex mcp add obs --env OBS_PASSWORD=YOUR_OBS_PASSWORD -- npx -y https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.1/ramgao-obs-agent-mcp-1.0.1.tgz
 ```
 
 See the [official Codex MCP configuration guide](https://developers.openai.com/codex/mcp).
@@ -96,7 +96,7 @@ See the [official Codex MCP configuration guide](https://developers.openai.com/c
 Install the release globally:
 
 ```sh
-npm install -g https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.0/ramgao-obs-agent-mcp-1.0.0.tgz
+npm install -g https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.1/ramgao-obs-agent-mcp-1.0.1.tgz
 ```
 
 Then use `"command": "obs-agent-mcp"` with `"args": []` in your MCP client. On Windows, if your client cannot resolve npm's executable wrappers, use `node` with the absolute path to the installed `dist/cli.js` instead. This also avoids a package download during client startup.
@@ -119,7 +119,7 @@ Configure the client with `"command": "node"` and `"args": ["/absolute/path/to/o
 With `OBS_PASSWORD` set in your terminal environment:
 
 ```sh
-npx -y https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.0/ramgao-obs-agent-mcp-1.0.0.tgz doctor
+npx -y https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.1/ramgao-obs-agent-mcp-1.0.1.tgz doctor
 ```
 
 `doctor` reports connection, version, output state and capabilities. `config` prints the client configuration template. `--help` lists all settings. Default startup serves MCP over standard input/output; log messages go to stderr.

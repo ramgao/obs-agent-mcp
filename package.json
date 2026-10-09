@@ -1,17 +1,40 @@
 {
   "name": "@ramgao/obs-agent-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Give AI agents professional control of OBS Studio: scenes, audio, recording, screenshots, workflows and the complete WebSocket API.",
   "type": "module",
   "license": "MIT",
   "author": "ramgao",
-  "repository": { "type": "git", "url": "https://github.com/ramgao/obs-agent-mcp.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramgao/obs-agent-mcp.git"
+  },
   "homepage": "https://github.com/ramgao/obs-agent-mcp#readme",
-  "bugs": { "url": "https://github.com/ramgao/obs-agent-mcp/issues" },
-  "bin": { "obs-agent-mcp": "dist/cli.js" },
-  "files": ["dist", "README.md", "LICENSE", "docs"],
-  "engines": { "node": ">=22" },
-  "keywords": ["mcp", "model-context-protocol", "obs", "obs-studio", "ai", "agent", "streaming", "recording"],
+  "bugs": {
+    "url": "https://github.com/ramgao/obs-agent-mcp/issues"
+  },
+  "bin": {
+    "obs-agent-mcp": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obs",
+    "obs-studio",
+    "ai",
+    "agent",
+    "streaming",
+    "recording"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/cli.js",

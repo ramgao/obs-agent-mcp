@@ -1,6 +1,6 @@
 # Validation
 
-The initial release passed 21 automated tests locally on Node.js 24 and Windows. The repository's CI matrix runs the same checks on Node.js 22 and 24 across Windows, macOS and Linux.
+The initial release passed 22 automated tests locally on Node.js 24 and Windows. The repository's CI matrix runs the same checks on Node.js 22 and 24 across Windows, macOS and Linux.
 
 Live acceptance passed against an isolated Windows OBS Studio 32.1.2 instance with obs-websocket 5.7.3. The [acceptance report](acceptance.json) records the checks. All content was synthetic: color sources, a text title and a looping silent WAV. No public stream, display capture, webcam capture or microphone recording was started.
 

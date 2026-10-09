@@ -6,16 +6,17 @@ import { createServer } from './server.js';
 import { errorInfo } from './errors.js';
 import { status } from './workflows.js';
 import { catalog } from './catalog.js';
+import { VERSION, RELEASE_PACKAGE } from './metadata.js';
 
-export const releasePackage = 'https://github.com/ramgao/obs-agent-mcp/releases/download/v1.0.0/ramgao-obs-agent-mcp-1.0.0.tgz';
+export const releasePackage = RELEASE_PACKAGE;
 
 async function main(): Promise<void> {
   const command = process.argv[2] ?? 'serve';
   if (command === '--help' || command === '-h' || command === 'help') {
-    console.log(`OBS Agent MCP 1.0.0\n\nUsage: obs-agent-mcp [serve|doctor|config|--version]\n\nserve     Start the MCP server on standard input/output (default).\ndoctor    Check OBS connection and report current state as JSON.\nconfig    Print a Claude Desktop / Cursor MCP configuration.\n\nEnvironment:\n  OBS_URL                ws://127.0.0.1:4455 by default\n  OBS_PASSWORD           OBS WebSocket password\n  OBS_TOOL_MODE          curated (default) or full\n  OBS_READ_ONLY          true or false (default)\n  OBS_TIMEOUT_MS         1000..60000, default 10000\n  OBS_EVENT_BUFFER_SIZE  1..2000, default 200\n\nRequires Node.js 22+ and OBS Studio with WebSocket enabled.\nNo credentials or .env files are read from disk automatically.`);
+    console.log(`OBS Agent MCP ${VERSION}\n\nUsage: obs-agent-mcp [serve|doctor|config|--version]\n\nserve     Start the MCP server on standard input/output (default).\ndoctor    Check OBS connection and report current state as JSON.\nconfig    Print a Claude Desktop / Cursor MCP configuration.\n\nEnvironment:\n  OBS_URL                ws://127.0.0.1:4455 by default\n  OBS_PASSWORD           OBS WebSocket password\n  OBS_TOOL_MODE          curated (default) or full\n  OBS_READ_ONLY          true or false (default)\n  OBS_TIMEOUT_MS         1000..60000, default 10000\n  OBS_EVENT_BUFFER_SIZE  1..2000, default 200\n\nRequires Node.js 22+ and OBS Studio with WebSocket enabled.\nNo credentials or .env files are read from disk automatically.`);
     return;
   }
-  if (command === '--version') { console.log('1.0.0'); return; }
+  if (command === '--version') { console.log(VERSION); return; }
   if (command === 'config') {
     console.log(JSON.stringify({ mcpServers: { obs: { command: 'npx', args: ['-y', releasePackage], env: { OBS_URL: 'ws://127.0.0.1:4455', OBS_PASSWORD: 'REPLACE_WITH_YOUR_OBS_WEBSOCKET_PASSWORD', OBS_TOOL_MODE: 'curated' } } } }, null, 2));
     return;

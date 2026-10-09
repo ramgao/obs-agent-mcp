@@ -56,9 +56,9 @@ export function createTools(obs: ObsApi, scheduler: CueScheduler): Map<string, A
     const sourceName = a.sourceName ?? (await obs.request('GetCurrentProgramScene')).currentProgramSceneName;
     const format = String(a.format ?? 'jpg');
     const result = await obs.request('GetSourceScreenshot', { sourceName, imageFormat: format, imageWidth: a.width ?? 1280 });
-    const match = String(result.imageData).match(/^data:(image\/(?:png|jpeg));base64,([A-Za-z0-9+/=]+)$/);
+    const match = String(result.imageData).match(/^data:(image\/(?:png|jpeg|jpg));base64,([A-Za-z0-9+/=]+)$/);
     if (!match) throw new AgentError('INVALID_IMAGE', 'OBS returned an unrecognized screenshot payload.');
-    return new ImageResult(match[2]!, match[1]!, { sourceName, width: a.width ?? 1280 });
+    return new ImageResult(match[2]!, match[1] === 'image/jpg' ? 'image/jpeg' : match[1]!, { sourceName, width: a.width ?? 1280 });
   }, true);
   add('obs_layout_source', 'Fit a scene item into a fullscreen, corner, half-screen or custom layout. Returns the previous transform for restoration. Resets cropping, rotation and mirroring. Prefer fit=contain; cover can extend beyond the requested box.', {
     sceneName: str('Scene containing the item.'), sourceName: str('Source name, if unique in the scene.'), sceneItemId: int('Specific item ID; preferred when a source appears more than once.', 0),
