@@ -1,0 +1,3312 @@
+[
+  {
+    "requestType": "GetCanvasList",
+    "category": "canvases",
+    "initialVersion": "5.7.0",
+    "description": "Get Canvas List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetPersistentData",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Get Persistent Data in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "realm": {
+          "type": "string",
+          "description": "realm"
+        },
+        "slotName": {
+          "type": "string",
+          "description": "slot Name"
+        }
+      },
+      "required": [
+        "realm",
+        "slotName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetPersistentData",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Set Persistent Data in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "realm": {
+          "type": "string",
+          "description": "realm"
+        },
+        "slotName": {
+          "type": "string",
+          "description": "slot Name"
+        },
+        "slotValue": {
+          "description": "slot Value"
+        }
+      },
+      "required": [
+        "realm",
+        "slotName",
+        "slotValue"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneCollectionList",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Collection List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetCurrentSceneCollection",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Set Current Scene Collection in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sceneCollectionName": {
+          "type": "string",
+          "description": "scene Collection Name"
+        }
+      },
+      "required": [
+        "sceneCollectionName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CreateSceneCollection",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Create Scene Collection in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sceneCollectionName": {
+          "type": "string",
+          "description": "scene Collection Name"
+        }
+      },
+      "required": [
+        "sceneCollectionName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetProfileList",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Get Profile List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetCurrentProfile",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Set Current Profile in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "profileName": {
+          "type": "string",
+          "description": "profile Name"
+        }
+      },
+      "required": [
+        "profileName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CreateProfile",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Create Profile in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "profileName": {
+          "type": "string",
+          "description": "profile Name"
+        }
+      },
+      "required": [
+        "profileName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "RemoveProfile",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Remove Profile in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "profileName": {
+          "type": "string",
+          "description": "profile Name"
+        }
+      },
+      "required": [
+        "profileName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetProfileParameter",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Get Profile Parameter in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "parameterCategory": {
+          "type": "string",
+          "description": "parameter Category"
+        },
+        "parameterName": {
+          "type": "string",
+          "description": "parameter Name"
+        }
+      },
+      "required": [
+        "parameterCategory",
+        "parameterName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetProfileParameter",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Set Profile Parameter in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "parameterCategory": {
+          "type": "string",
+          "description": "parameter Category"
+        },
+        "parameterName": {
+          "type": "string",
+          "description": "parameter Name"
+        },
+        "parameterValue": {
+          "type": "string",
+          "description": "parameter Value"
+        }
+      },
+      "required": [
+        "parameterCategory",
+        "parameterName",
+        "parameterValue"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetVideoSettings",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Get Video Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetVideoSettings",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Set Video Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "fpsNumerator": {
+          "type": "number",
+          "description": "fps Numerator (>= 1)",
+          "minimum": 1
+        },
+        "fpsDenominator": {
+          "type": "number",
+          "description": "fps Denominator (>= 1)",
+          "minimum": 1
+        },
+        "baseWidth": {
+          "type": "number",
+          "description": "base Width (>= 1, <= 4096)",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "baseHeight": {
+          "type": "number",
+          "description": "base Height (>= 1, <= 4096)",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "outputWidth": {
+          "type": "number",
+          "description": "output Width (>= 1, <= 4096)",
+          "minimum": 1,
+          "maximum": 4096
+        },
+        "outputHeight": {
+          "type": "number",
+          "description": "output Height (>= 1, <= 4096)",
+          "minimum": 1,
+          "maximum": 4096
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetStreamServiceSettings",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Get Stream Service Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetStreamServiceSettings",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Set Stream Service Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "streamServiceType": {
+          "type": "string",
+          "description": "stream Service Type"
+        },
+        "streamServiceSettings": {
+          "type": "object",
+          "description": "stream Service Settings",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "streamServiceType",
+        "streamServiceSettings"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetRecordDirectory",
+    "category": "config",
+    "initialVersion": "5.0.0",
+    "description": "Get Record Directory in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetRecordDirectory",
+    "category": "config",
+    "initialVersion": "5.3.0",
+    "description": "Set Record Directory in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "recordDirectory": {
+          "type": "string",
+          "description": "record Directory"
+        }
+      },
+      "required": [
+        "recordDirectory"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSourceFilterKindList",
+    "category": "filters",
+    "initialVersion": "5.4.0",
+    "description": "Get Source Filter Kind List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSourceFilterList",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Get Source Filter List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSourceFilterDefaultSettings",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Get Source Filter Default Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "filterKind": {
+          "type": "string",
+          "description": "filter Kind"
+        }
+      },
+      "required": [
+        "filterKind"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CreateSourceFilter",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Create Source Filter in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "filterName": {
+          "type": "string",
+          "description": "filter Name"
+        },
+        "filterKind": {
+          "type": "string",
+          "description": "filter Kind"
+        },
+        "filterSettings": {
+          "type": "object",
+          "description": "filter Settings",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "filterName",
+        "filterKind"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "RemoveSourceFilter",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Remove Source Filter in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "filterName": {
+          "type": "string",
+          "description": "filter Name"
+        }
+      },
+      "required": [
+        "filterName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSourceFilterName",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Set Source Filter Name in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "filterName": {
+          "type": "string",
+          "description": "filter Name"
+        },
+        "newFilterName": {
+          "type": "string",
+          "description": "new Filter Name"
+        }
+      },
+      "required": [
+        "filterName",
+        "newFilterName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSourceFilter",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Get Source Filter in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "filterName": {
+          "type": "string",
+          "description": "filter Name"
+        }
+      },
+      "required": [
+        "filterName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSourceFilterIndex",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Set Source Filter Index in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "filterName": {
+          "type": "string",
+          "description": "filter Name"
+        },
+        "filterIndex": {
+          "type": "number",
+          "description": "filter Index (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "filterName",
+        "filterIndex"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSourceFilterSettings",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Set Source Filter Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "filterName": {
+          "type": "string",
+          "description": "filter Name"
+        },
+        "filterSettings": {
+          "type": "object",
+          "description": "filter Settings",
+          "additionalProperties": true
+        },
+        "overlay": {
+          "type": "boolean",
+          "description": "overlay"
+        }
+      },
+      "required": [
+        "filterName",
+        "filterSettings"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSourceFilterEnabled",
+    "category": "filters",
+    "initialVersion": "5.0.0",
+    "description": "Set Source Filter Enabled in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "filterName": {
+          "type": "string",
+          "description": "filter Name"
+        },
+        "filterEnabled": {
+          "type": "boolean",
+          "description": "filter Enabled"
+        }
+      },
+      "required": [
+        "filterName",
+        "filterEnabled"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetVersion",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Get Version in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetStats",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Get Stats in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "BroadcastCustomEvent",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Broadcast Custom Event in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "eventData": {
+          "type": "object",
+          "description": "event Data",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "eventData"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CallVendorRequest",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Call Vendor Request in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "vendorName": {
+          "type": "string",
+          "description": "vendor Name"
+        },
+        "requestType": {
+          "type": "string",
+          "description": "request Type"
+        },
+        "requestData": {
+          "type": "object",
+          "description": "request Data",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "vendorName",
+        "requestType"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetHotkeyList",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Get Hotkey List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "TriggerHotkeyByName",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Trigger Hotkey By Name in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "hotkeyName": {
+          "type": "string",
+          "description": "hotkey Name"
+        },
+        "contextName": {
+          "type": "string",
+          "description": "context Name"
+        }
+      },
+      "required": [
+        "hotkeyName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "TriggerHotkeyByKeySequence",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Trigger Hotkey By Key Sequence in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "keyId": {
+          "type": "string",
+          "description": "key Id"
+        },
+        "keyModifiers": {
+          "type": "object",
+          "description": "key Modifiers",
+          "additionalProperties": true
+        },
+        "keyModifiers.shift": {
+          "type": "boolean",
+          "description": "key Modifiers.shift"
+        },
+        "keyModifiers.control": {
+          "type": "boolean",
+          "description": "key Modifiers.control"
+        },
+        "keyModifiers.alt": {
+          "type": "boolean",
+          "description": "key Modifiers.alt"
+        },
+        "keyModifiers.command": {
+          "type": "boolean",
+          "description": "key Modifiers.command"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "Sleep",
+    "category": "general",
+    "initialVersion": "5.0.0",
+    "description": "Sleep in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sleepMillis": {
+          "type": "number",
+          "description": "sleep Millis (>= 0, <= 50000)",
+          "minimum": 0,
+          "maximum": 50000
+        },
+        "sleepFrames": {
+          "type": "number",
+          "description": "sleep Frames (>= 0, <= 10000)",
+          "minimum": 0,
+          "maximum": 10000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputList",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputKind": {
+          "type": "string",
+          "description": "input Kind"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputKindList",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Kind List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "unversioned": {
+          "type": "boolean",
+          "description": "unversioned"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSpecialInputs",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Special Inputs in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CreateInput",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Create Input in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputKind": {
+          "type": "string",
+          "description": "input Kind"
+        },
+        "inputSettings": {
+          "type": "object",
+          "description": "input Settings",
+          "additionalProperties": true
+        },
+        "sceneItemEnabled": {
+          "type": "boolean",
+          "description": "scene Item Enabled"
+        }
+      },
+      "required": [
+        "inputName",
+        "inputKind"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "RemoveInput",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Remove Input in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputName",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Name in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "newInputName": {
+          "type": "string",
+          "description": "new Input Name"
+        }
+      },
+      "required": [
+        "newInputName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputDefaultSettings",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Default Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputKind": {
+          "type": "string",
+          "description": "input Kind"
+        }
+      },
+      "required": [
+        "inputKind"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputSettings",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputSettings",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputSettings": {
+          "type": "object",
+          "description": "input Settings",
+          "additionalProperties": true
+        },
+        "overlay": {
+          "type": "boolean",
+          "description": "overlay"
+        }
+      },
+      "required": [
+        "inputSettings"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputMute",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Mute in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputMute",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Mute in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputMuted": {
+          "type": "boolean",
+          "description": "input Muted"
+        }
+      },
+      "required": [
+        "inputMuted"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ToggleInputMute",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Toggle Input Mute in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputVolume",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Volume in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputVolume",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Volume in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputVolumeMul": {
+          "type": "number",
+          "description": "input Volume Mul (>= 0, <= 20)",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "inputVolumeDb": {
+          "type": "number",
+          "description": "input Volume Db (>= -100, <= 26)",
+          "minimum": -100,
+          "maximum": 26
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputAudioBalance",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Audio Balance in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputAudioBalance",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Audio Balance in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputAudioBalance": {
+          "type": "number",
+          "description": "input Audio Balance (>= 0.0, <= 1.0)",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "inputAudioBalance"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputAudioSyncOffset",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Audio Sync Offset in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputAudioSyncOffset",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Audio Sync Offset in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputAudioSyncOffset": {
+          "type": "number",
+          "description": "input Audio Sync Offset (>= -950, <= 20000)",
+          "minimum": -950,
+          "maximum": 20000
+        }
+      },
+      "required": [
+        "inputAudioSyncOffset"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputAudioMonitorType",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Audio Monitor Type in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputAudioMonitorType",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Audio Monitor Type in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "monitorType": {
+          "type": "string",
+          "description": "monitor Type"
+        }
+      },
+      "required": [
+        "monitorType"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputAudioTracks",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Audio Tracks in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputAudioTracks",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Input Audio Tracks in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputAudioTracks": {
+          "type": "object",
+          "description": "input Audio Tracks",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "inputAudioTracks"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputDeinterlaceMode",
+    "category": "inputs",
+    "initialVersion": "5.6.0",
+    "description": "Get Input Deinterlace Mode in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputDeinterlaceMode",
+    "category": "inputs",
+    "initialVersion": "5.6.0",
+    "description": "Set Input Deinterlace Mode in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputDeinterlaceMode": {
+          "type": "string",
+          "description": "input Deinterlace Mode"
+        }
+      },
+      "required": [
+        "inputDeinterlaceMode"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputDeinterlaceFieldOrder",
+    "category": "inputs",
+    "initialVersion": "5.6.0",
+    "description": "Get Input Deinterlace Field Order in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetInputDeinterlaceFieldOrder",
+    "category": "inputs",
+    "initialVersion": "5.6.0",
+    "description": "Set Input Deinterlace Field Order in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "inputDeinterlaceFieldOrder": {
+          "type": "string",
+          "description": "input Deinterlace Field Order"
+        }
+      },
+      "required": [
+        "inputDeinterlaceFieldOrder"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetInputPropertiesListPropertyItems",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Input Properties List Property Items in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "propertyName": {
+          "type": "string",
+          "description": "property Name"
+        }
+      },
+      "required": [
+        "propertyName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "PressInputPropertiesButton",
+    "category": "inputs",
+    "initialVersion": "5.0.0",
+    "description": "Press Input Properties Button in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "propertyName": {
+          "type": "string",
+          "description": "property Name"
+        }
+      },
+      "required": [
+        "propertyName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetMediaInputStatus",
+    "category": "media inputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Media Input Status in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetMediaInputCursor",
+    "category": "media inputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Media Input Cursor in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "mediaCursor": {
+          "type": "number",
+          "description": "media Cursor (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "mediaCursor"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "OffsetMediaInputCursor",
+    "category": "media inputs",
+    "initialVersion": "5.0.0",
+    "description": "Offset Media Input Cursor in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "mediaCursorOffset": {
+          "type": "number",
+          "description": "media Cursor Offset"
+        }
+      },
+      "required": [
+        "mediaCursorOffset"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "TriggerMediaInputAction",
+    "category": "media inputs",
+    "initialVersion": "5.0.0",
+    "description": "Trigger Media Input Action in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        },
+        "mediaAction": {
+          "type": "string",
+          "description": "media Action"
+        }
+      },
+      "required": [
+        "mediaAction"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetVirtualCamStatus",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Virtual Cam Status in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ToggleVirtualCam",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Toggle Virtual Cam in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StartVirtualCam",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Start Virtual Cam in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StopVirtualCam",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Stop Virtual Cam in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetReplayBufferStatus",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Replay Buffer Status in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ToggleReplayBuffer",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Toggle Replay Buffer in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StartReplayBuffer",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Start Replay Buffer in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StopReplayBuffer",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Stop Replay Buffer in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SaveReplayBuffer",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Save Replay Buffer in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetLastReplayBufferReplay",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Last Replay Buffer Replay in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetOutputList",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Output List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetOutputStatus",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Output Status in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "outputName": {
+          "type": "string",
+          "description": "output Name"
+        }
+      },
+      "required": [
+        "outputName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ToggleOutput",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Toggle Output in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "outputName": {
+          "type": "string",
+          "description": "output Name"
+        }
+      },
+      "required": [
+        "outputName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StartOutput",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Start Output in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "outputName": {
+          "type": "string",
+          "description": "output Name"
+        }
+      },
+      "required": [
+        "outputName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StopOutput",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Stop Output in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "outputName": {
+          "type": "string",
+          "description": "output Name"
+        }
+      },
+      "required": [
+        "outputName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetOutputSettings",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Get Output Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "outputName": {
+          "type": "string",
+          "description": "output Name"
+        }
+      },
+      "required": [
+        "outputName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetOutputSettings",
+    "category": "outputs",
+    "initialVersion": "5.0.0",
+    "description": "Set Output Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "outputName": {
+          "type": "string",
+          "description": "output Name"
+        },
+        "outputSettings": {
+          "type": "object",
+          "description": "output Settings",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "outputName",
+        "outputSettings"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetRecordStatus",
+    "category": "record",
+    "initialVersion": "5.0.0",
+    "description": "Get Record Status in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ToggleRecord",
+    "category": "record",
+    "initialVersion": "5.0.0",
+    "description": "Toggle Record in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StartRecord",
+    "category": "record",
+    "initialVersion": "5.0.0",
+    "description": "Start Record in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StopRecord",
+    "category": "record",
+    "initialVersion": "5.0.0",
+    "description": "Stop Record in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ToggleRecordPause",
+    "category": "record",
+    "initialVersion": "5.0.0",
+    "description": "Toggle Record Pause in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "PauseRecord",
+    "category": "record",
+    "initialVersion": "5.0.0",
+    "description": "Pause Record in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ResumeRecord",
+    "category": "record",
+    "initialVersion": "5.0.0",
+    "description": "Resume Record in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SplitRecordFile",
+    "category": "record",
+    "initialVersion": "5.5.0",
+    "description": "Split Record File in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CreateRecordChapter",
+    "category": "record",
+    "initialVersion": "5.5.0",
+    "description": "Create Record Chapter in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "chapterName": {
+          "type": "string",
+          "description": "chapter Name"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemList",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Item List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetGroupSceneItemList",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Group Scene Item List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemId",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Item Id in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "searchOffset": {
+          "type": "number",
+          "description": "search Offset (>= -1)",
+          "minimum": -1
+        }
+      },
+      "required": [
+        "sourceName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemSource",
+    "category": "scene items",
+    "initialVersion": "5.4.0",
+    "description": "Get Scene Item Source in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CreateSceneItem",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Create Scene Item in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "sceneItemEnabled": {
+          "type": "boolean",
+          "description": "scene Item Enabled"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "RemoveSceneItem",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Remove Scene Item in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "DuplicateSceneItem",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Duplicate Scene Item in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        },
+        "destinationSceneName": {
+          "type": "string",
+          "description": "destination Scene Name"
+        },
+        "destinationSceneUuid": {
+          "type": "string",
+          "description": "destination Scene Uuid"
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemTransform",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Item Transform in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSceneItemTransform",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Set Scene Item Transform in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        },
+        "sceneItemTransform": {
+          "type": "object",
+          "description": "scene Item Transform",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "sceneItemId",
+        "sceneItemTransform"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemEnabled",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Item Enabled in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSceneItemEnabled",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Set Scene Item Enabled in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        },
+        "sceneItemEnabled": {
+          "type": "boolean",
+          "description": "scene Item Enabled"
+        }
+      },
+      "required": [
+        "sceneItemId",
+        "sceneItemEnabled"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemLocked",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Item Locked in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSceneItemLocked",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Set Scene Item Locked in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        },
+        "sceneItemLocked": {
+          "type": "boolean",
+          "description": "scene Item Locked"
+        }
+      },
+      "required": [
+        "sceneItemId",
+        "sceneItemLocked"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemIndex",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Item Index in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSceneItemIndex",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Set Scene Item Index in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        },
+        "sceneItemIndex": {
+          "type": "number",
+          "description": "scene Item Index (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId",
+        "sceneItemIndex"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneItemBlendMode",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Item Blend Mode in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "sceneItemId"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSceneItemBlendMode",
+    "category": "scene items",
+    "initialVersion": "5.0.0",
+    "description": "Set Scene Item Blend Mode in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "sceneItemId": {
+          "type": "number",
+          "description": "scene Item Id (>= 0)",
+          "minimum": 0
+        },
+        "sceneItemBlendMode": {
+          "type": "string",
+          "description": "scene Item Blend Mode"
+        }
+      },
+      "required": [
+        "sceneItemId",
+        "sceneItemBlendMode"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneList",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetGroupList",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Get Group List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetCurrentProgramScene",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Get Current Program Scene in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetCurrentProgramScene",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Set Current Program Scene in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetCurrentPreviewScene",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Get Current Preview Scene in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetCurrentPreviewScene",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Set Current Preview Scene in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "CreateScene",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Create Scene in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        }
+      },
+      "required": [
+        "sceneName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "RemoveScene",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Remove Scene in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSceneName",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Set Scene Name in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "newSceneName": {
+          "type": "string",
+          "description": "new Scene Name"
+        }
+      },
+      "required": [
+        "newSceneName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneSceneTransitionOverride",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Scene Transition Override in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetSceneSceneTransitionOverride",
+    "category": "scenes",
+    "initialVersion": "5.0.0",
+    "description": "Set Scene Scene Transition Override in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sceneName": {
+          "type": "string",
+          "description": "scene Name"
+        },
+        "sceneUuid": {
+          "type": "string",
+          "description": "scene Uuid"
+        },
+        "transitionName": {
+          "type": "string",
+          "description": "transition Name"
+        },
+        "transitionDuration": {
+          "type": "number",
+          "description": "transition Duration (>= 50, <= 20000)",
+          "minimum": 50,
+          "maximum": 20000
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSourceActive",
+    "category": "sources",
+    "initialVersion": "5.0.0",
+    "description": "Get Source Active in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSourceScreenshot",
+    "category": "sources",
+    "initialVersion": "5.0.0",
+    "description": "Get Source Screenshot in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "imageFormat": {
+          "type": "string",
+          "description": "image Format"
+        },
+        "imageWidth": {
+          "type": "number",
+          "description": "image Width (>= 8, <= 4096)",
+          "minimum": 8,
+          "maximum": 4096
+        },
+        "imageHeight": {
+          "type": "number",
+          "description": "image Height (>= 8, <= 4096)",
+          "minimum": 8,
+          "maximum": 4096
+        },
+        "imageCompressionQuality": {
+          "type": "number",
+          "description": "image Compression Quality (>= -1, <= 100)",
+          "minimum": -1,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "imageFormat"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SaveSourceScreenshot",
+    "category": "sources",
+    "initialVersion": "5.0.0",
+    "description": "Save Source Screenshot in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "imageFormat": {
+          "type": "string",
+          "description": "image Format"
+        },
+        "imageFilePath": {
+          "type": "string",
+          "description": "image File Path"
+        },
+        "imageWidth": {
+          "type": "number",
+          "description": "image Width (>= 8, <= 4096)",
+          "minimum": 8,
+          "maximum": 4096
+        },
+        "imageHeight": {
+          "type": "number",
+          "description": "image Height (>= 8, <= 4096)",
+          "minimum": 8,
+          "maximum": 4096
+        },
+        "imageCompressionQuality": {
+          "type": "number",
+          "description": "image Compression Quality (>= -1, <= 100)",
+          "minimum": -1,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "imageFormat",
+        "imageFilePath"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetStreamStatus",
+    "category": "stream",
+    "initialVersion": "5.0.0",
+    "description": "Get Stream Status in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "ToggleStream",
+    "category": "stream",
+    "initialVersion": "5.0.0",
+    "description": "Toggle Stream in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StartStream",
+    "category": "stream",
+    "initialVersion": "5.0.0",
+    "description": "Start Stream in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "StopStream",
+    "category": "stream",
+    "initialVersion": "5.0.0",
+    "description": "Stop Stream in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SendStreamCaption",
+    "category": "stream",
+    "initialVersion": "5.0.0",
+    "description": "Send Stream Caption in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "captionText": {
+          "type": "string",
+          "description": "caption Text"
+        }
+      },
+      "required": [
+        "captionText"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetTransitionKindList",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Get Transition Kind List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetSceneTransitionList",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Get Scene Transition List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetCurrentSceneTransition",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Get Current Scene Transition in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetCurrentSceneTransition",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Set Current Scene Transition in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "transitionName": {
+          "type": "string",
+          "description": "transition Name"
+        }
+      },
+      "required": [
+        "transitionName"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetCurrentSceneTransitionDuration",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Set Current Scene Transition Duration in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "transitionDuration": {
+          "type": "number",
+          "description": "transition Duration (>= 50, <= 20000)",
+          "minimum": 50,
+          "maximum": 20000
+        }
+      },
+      "required": [
+        "transitionDuration"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetCurrentSceneTransitionSettings",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Set Current Scene Transition Settings in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "transitionSettings": {
+          "type": "object",
+          "description": "transition Settings",
+          "additionalProperties": true
+        },
+        "overlay": {
+          "type": "boolean",
+          "description": "overlay"
+        }
+      },
+      "required": [
+        "transitionSettings"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetCurrentSceneTransitionCursor",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Get Current Scene Transition Cursor in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "TriggerStudioModeTransition",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Trigger Studio Mode Transition in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetTBarPosition",
+    "category": "transitions",
+    "initialVersion": "5.0.0",
+    "description": "Set TBar Position in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "position": {
+          "type": "number",
+          "description": "position (>= 0.0, <= 1.0)",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "release": {
+          "type": "boolean",
+          "description": "release"
+        }
+      },
+      "required": [
+        "position"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetStudioModeEnabled",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Get Studio Mode Enabled in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "SetStudioModeEnabled",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Set Studio Mode Enabled in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "studioModeEnabled": {
+          "type": "boolean",
+          "description": "studio Mode Enabled"
+        }
+      },
+      "required": [
+        "studioModeEnabled"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "OpenInputPropertiesDialog",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Open Input Properties Dialog in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "OpenInputFiltersDialog",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Open Input Filters Dialog in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "OpenInputInteractDialog",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Open Input Interact Dialog in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "inputName": {
+          "type": "string",
+          "description": "input Name"
+        },
+        "inputUuid": {
+          "type": "string",
+          "description": "input Uuid"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "GetMonitorList",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Get Monitor List in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "OpenVideoMixProjector",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Open Video Mix Projector in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "videoMixType": {
+          "type": "string",
+          "description": "video Mix Type"
+        },
+        "monitorIndex": {
+          "type": "number",
+          "description": "monitor Index"
+        },
+        "projectorGeometry": {
+          "type": "string",
+          "description": "projector Geometry"
+        }
+      },
+      "required": [
+        "videoMixType"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "requestType": "OpenSourceProjector",
+    "category": "ui",
+    "initialVersion": "5.0.0",
+    "description": "Open Source Projector in OBS. Discover supported requests with obs_list_requests before using version-specific features.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "canvasUuid": {
+          "type": "string",
+          "description": "canvas Uuid"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "source Name"
+        },
+        "sourceUuid": {
+          "type": "string",
+          "description": "source Uuid"
+        },
+        "monitorIndex": {
+          "type": "number",
+          "description": "monitor Index"
+        },
+        "projectorGeometry": {
+          "type": "string",
+          "description": "projector Geometry"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    }
+  }
+]

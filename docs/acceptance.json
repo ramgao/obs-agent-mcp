@@ -1,0 +1,19 @@
+{
+  "obsVersion": "32.1.2",
+  "websocketVersion": "5.7.3",
+  "checks": [
+    "Negotiated 88 MCP tools over stdio",
+    "Authenticated to OBS 32.1.2",
+    "Created and inspected a tutorial scene from a dry-run plan",
+    "Returned a real scene screenshot as an MCP image",
+    "Ran recording preflight",
+    "Adjusted and inspected synthetic audio input",
+    "Executed and inspected a timed cue",
+    "Started, paused, resumed and stopped a synthetic recording; confirmed saved file",
+    "Read real recording events from the event buffer",
+    "Transitioned through Studio Mode"
+  ],
+  "recordingBytes": 11284,
+  "publicStreamStarted": false,
+  "displayOrCameraCaptured": false
+}
