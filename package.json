@@ -1,6 +1,6 @@
 {
   "name": "@ramgao/obs-agent-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Give AI agents professional control of OBS Studio: scenes, audio, recording, screenshots, workflows and the complete WebSocket API.",
   "type": "module",
   "license": "MIT",

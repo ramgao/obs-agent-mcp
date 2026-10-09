@@ -2,6 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { WebSocketServer } from 'ws';
+import { spawn } from 'node:child_process';
+import { createInterface } from 'node:readline';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
 import { readConfig } from '../src/config.js';
@@ -103,4 +105,28 @@ test('stdio launcher negotiates MCP even with OBS offline, then reports errors a
     assert.equal(result.isError, true);
     assert.match(JSON.stringify(result), /OBS_UNAVAILABLE/);
   } finally { await client.close(); }
+});
+test('stdin EOF closes an authenticated OBS socket and exits without a termination signal', async () => {
+  const mock = await mockServer();
+  const child = spawn(process.execPath, ['--import', 'tsx', 'src/cli.ts'], { cwd: process.cwd(), env: { ...process.env, OBS_URL: mock.url }, stdio: ['pipe', 'pipe', 'pipe'] });
+  const reader = createInterface({ input: child.stdout });
+  const pending = new Map<number, (message: any) => void>();
+  reader.on('line', line => { const m = JSON.parse(line); pending.get(m.id)?.(m); });
+  const send = (id: number, method: string, params: unknown) => new Promise<any>((resolve, reject) => {
+    const timeout = setTimeout(() => reject(new Error(`No response to ${method}`)), 5000);
+    pending.set(id, message => { clearTimeout(timeout); resolve(message); });
+    child.stdin.write(JSON.stringify({ jsonrpc: '2.0', id, method, params }) + '\n');
+  });
+  try {
+    await send(1, 'initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'eof-test', version: '1' } });
+    child.stdin.write(JSON.stringify({ jsonrpc: '2.0', method: 'notifications/initialized' }) + '\n');
+    const result = await send(2, 'tools/call', { name: 'obs_request', arguments: { requestType: 'GetStats' } });
+    assert.equal(result.result.isError, undefined); assert.equal(mock.server.clients.size, 1);
+    const exited = new Promise<void>((resolve, reject) => {
+      const timeout = setTimeout(() => reject(new Error('Server remained alive after stdin EOF')), 2000);
+      child.once('exit', code => { clearTimeout(timeout); code === 0 ? resolve() : reject(new Error(`Exit code ${code}`)); });
+    });
+    child.stdin.end(); await exited;
+    assert.equal(mock.server.clients.size, 0);
+  } finally { reader.close(); if (child.exitCode === null) child.kill(); await mock.close(); }
 });

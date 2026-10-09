@@ -41,6 +41,10 @@ async function main(): Promise<void> {
   };
   process.once('SIGINT', () => { void shutdown(); });
   process.once('SIGTERM', () => { void shutdown(); });
+  // The SDK's stdio transport does not close itself on stdin EOF. Handle it
+  // explicitly so npx launchers cannot leave OBS sockets or cue timers alive.
+  process.stdin.once('end', () => { void shutdown(); });
+  process.stdin.once('close', () => { void shutdown(); });
   const transport = new StdioServerTransport();
   app.server.onclose = () => { void shutdown(); };
   await app.server.connect(transport);
